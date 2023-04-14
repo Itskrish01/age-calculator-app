@@ -1,5 +1,4 @@
 import { useFormik } from "formik";
-import { HackText } from "react-hacker-text-effect";
 import "./App.css";
 import Input from "./components/UI/Input";
 import * as Yup from "yup";
