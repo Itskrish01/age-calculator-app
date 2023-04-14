@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="bg-white px-5 py-10 sm:px-10 sm:py-10 rounded-t-2xl sm:w-auto rounded-l-2xl rounded-br-[10rem]">
+      <div className="bg-white px-5 py-10 sm:px-10 sm:py-10 rounded-t-2xl w-full mx-5 sm:w-auto rounded-l-2xl rounded-br-[10rem]">
         <form onSubmit={formik.handleSubmit}>
           <div className="flex sm:mr-32">
             <Input
@@ -112,7 +112,7 @@ function App() {
             </button>
           </div>
         </form>
-        <div className="italic  font-extrabold mb-2 mt-3 text-[3rem] sm:text-[5rem]">
+        <div className="italic  font-extrabold mb-2 leading-[50px] sm:leading-[80px] text-[3rem] sm:text-[5rem]">
           <div>
             <span className="text-[#864cff] mr-4">
               {fullAgeInfo ? fullAgeInfo?.years : "--"}
