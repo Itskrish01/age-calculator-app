@@ -61,93 +61,79 @@ function App() {
   }
 
   return (
-    <div className="bg-white p-10 rounded-t-2xl rounded-l-2xl rounded-br-[10rem]">
-      <form onSubmit={formik.handleSubmit}>
-        <div className="flex gap-5 mr-32">
-          <Input
-            title="DAY"
-            placeholder="DD"
-            name="Day"
-            onChange={formik.handleChange}
-            value={formik.values.Day}
-            error={formik.errors.Day}
-          />
-          <Input
-            title="MONTH"
-            placeholder="MM"
-            name="Month"
-            onChange={formik.handleChange}
-            value={formik.values.Month}
-            error={formik.errors.Month}
-          />
-          <Input
-            title="YEAR"
-            placeholder="YYYY"
-            name="Year"
-            onChange={formik.handleChange}
-            value={formik.values.Year}
-            error={formik.errors.Year}
-          />
-        </div>
-        <div className="flex mt-2 items-center">
-          <div class="h-px flex-1 bg-slate-200 "></div>
-          <button
-            type="submit"
-            class="text-white bg-[#864cff] p-5 rounded-full"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
+    <div className="flex items-center justify-center h-screen">
+      <div className="bg-white px-5 py-10 sm:px-10 sm:py-10 rounded-t-2xl sm:w-auto rounded-l-2xl rounded-br-[10rem]">
+        <form onSubmit={formik.handleSubmit}>
+          <div className="flex sm:mr-32">
+            <Input
+              title="DAY"
+              placeholder="DD"
+              name="Day"
+              onChange={formik.handleChange}
+              value={formik.values.Day}
+              error={formik.errors.Day}
+            />
+            <Input
+              title="MONTH"
+              placeholder="MM"
+              name="Month"
+              onChange={formik.handleChange}
+              value={formik.values.Month}
+              error={formik.errors.Month}
+            />
+            <Input
+              title="YEAR"
+              placeholder="YYYY"
+              name="Year"
+              onChange={formik.handleChange}
+              value={formik.values.Year}
+              error={formik.errors.Year}
+            />
+          </div>
+          <div className="flex mt-2 justify-center items-center">
+            <div class="h-px flex-1 bg-slate-200 sm:my-0 my-10"></div>
+            <button
+              type="submit"
+              class="text-white absolute my-5 sm:relative bg-[#864cff] p-5 rounded-full"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-              />
-            </svg>
-
-            <span class="sr-only">Icon description</span>
-          </button>
-        </div>
-      </form>
-      <div className="italic leading-[80px] font-extrabold mb-2 text-[5rem]">
-        <div>
-          <span className="text-[#864cff] mr-4">
-            {fullAgeInfo ? fullAgeInfo?.years : "--"}
-          </span>
-          <span>years</span>
-        </div>
-        <div>
-          <span className="text-[#864cff] mr-4">
-            {fullAgeInfo ? fullAgeInfo?.months : "--"}
-          </span>
-          <span>months</span>
-        </div>
-        <div>
-          <span className="text-[#864cff] mr-4">
-            {fullAgeInfo ? fullAgeInfo?.days : "--"}
-          </span>
-          <span>days</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div className="italic  font-extrabold mb-2 mt-3 text-[3rem] sm:text-[5rem]">
+          <div>
+            <span className="text-[#864cff] mr-4">
+              {fullAgeInfo ? fullAgeInfo?.years : "--"}
+            </span>
+            <span>years</span>
+          </div>
+          <div>
+            <span className="text-[#864cff] mr-4">
+              {fullAgeInfo ? fullAgeInfo?.months : "--"}
+            </span>
+            <span>months</span>
+          </div>
+          <div>
+            <span className="text-[#864cff] mr-4">
+              {fullAgeInfo ? fullAgeInfo?.days : "--"}
+            </span>
+            <span>days</span>
+          </div>
         </div>
       </div>
-      <footer class="attribution absolute bottom-0">
-        Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
-        </a>
-        . Coded by{" "}
-        <a
-          className="text-blue-600"
-          href="https://www.frontendmentor.io/profile/Itskrish01"
-        >
-          itsKrish01
-        </a>
-        .
-      </footer>
     </div>
   );
 }
